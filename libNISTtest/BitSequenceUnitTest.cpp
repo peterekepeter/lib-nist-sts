@@ -27,5 +27,18 @@ namespace libNISTtest
 			// TODO: Your test code here
 		}
 
+		TEST_METHOD(BitSequenceMove)
+		{
+			std::vector<bool> data(4);
+			data[0] = true;
+			data[1] = false;
+			data[2] = true;
+			data[3] = false;
+			Nist::BitSequence sequence(data);
+			Nist::BitSequence sequence2 = std::move(sequence);
+			Assert::IsTrue(sequence.GetEpsilon() == nullptr, L"Original sequence should not contain any data.");
+			Assert::IsTrue(sequence2.GetEpsilon() != nullptr, L"New sequence should have data.");
+			Assert::IsTrue(sequence2.GetN() == 4, L"GetN() for new sequence should return 4.");
+		}
 	};
 }

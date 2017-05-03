@@ -48,13 +48,13 @@ namespace Nist
 
 
 		// get sparse array of bits, each byte is one bit, used by original NIST implementation
-		unsigned char* GetEpsilon()
+		const unsigned char* GetEpsilon() const
 		{
 			return bitStream->GetEpsilon();
 		}
 
 		// get packed array of bits, all 8 bits of each byte is used, used by fast NIST implementation
-		unsigned char* GetArray() const
+		const unsigned char* GetArray() const
 		{
 			return bitStream->GetArray();
 		}

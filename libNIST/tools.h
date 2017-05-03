@@ -36,7 +36,7 @@ inline unsigned int get_mask(int size) {
 	return (1 << size) - 1;
 }
 
-inline unsigned int get_nth_block4(unsigned char* arr, int offset)
+inline unsigned int get_nth_block4(const unsigned char* arr, int offset)
 {
-	return (*reinterpret_cast<unsigned int*>(arr + (offset >> 3))) >> (offset & 7);//(array2[(offset >> 3)&3][(offset >> 3)] >> (offset & 7));
+	return (*reinterpret_cast<const unsigned int*>(arr + (offset >> 3))) >> (offset & 7);//(array2[(offset >> 3)&3][(offset >> 3)] >> (offset & 7));
 }

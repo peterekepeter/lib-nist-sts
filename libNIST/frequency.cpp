@@ -16,11 +16,10 @@ Frequency(Nist::Test& test)
 {
 	auto n = test.GetN();
 	auto epsilon = test.GetEpsilon();
-	int		i;
 	double	f, s_obs, p_value, sum, sqrt2 = 1.41421356237309504880;
 
 	sum = 0.0;
-	for (i = 0; i<n; i++)
+	for (size_t i = 0; i<n; i++)
 		sum += 2 * static_cast<int>(epsilon[i]) - 1;
 	//sum += epsilon[i];
 	s_obs = fabs(sum) / sqrt(n);
@@ -102,7 +101,7 @@ Frequency2(Nist::Test& test)
 {
 	auto n = test.GetN();
 	auto array = test.GetArray();
-	int		i, int_sum;
+	size_t		i, int_sum;
 	double	f, s_obs, p_value, sum, sqrt2 = 1.41421356237309504880;
 	/*
 	short int LU_byte_weight[256] =
@@ -175,7 +174,7 @@ Frequency3(Nist::Test& test)
 	auto array = test.GetArray();
 	int int_sum, mask;
 	double	f, s_obs, p_value, sum, sqrt2 = 1.41421356237309504880;
-	unsigned char *p_tmp, *p_end;
+	const unsigned char *p_tmp, *p_end;
 
 	int LUT_HW_size = 16;
 	int LUT_HW_Bsize = 2;
@@ -252,7 +251,7 @@ Frequency4(Nist::Test& test)
 {
 	auto n = test.GetN();
 	auto array = test.GetArray();
-	int int_sum, i, j;
+	int int_sum, j;
 	double	f, s_obs, p_value, sum, sqrt2 = 1.41421356237309504880;
 
 	int LUT_HW_size = 16;
@@ -260,7 +259,7 @@ Frequency4(Nist::Test& test)
 
 
 	const int Tsize = 64;
-	uint64_t *pblock;
+	const uint64_t *pblock;
 	uint64_t help;
 	const unsigned int mask = (1 << LUT_HW_size) - 1;
 
@@ -270,8 +269,8 @@ Frequency4(Nist::Test& test)
 	sum = 0.0;
 	int_sum = 0;
 
-	pblock = reinterpret_cast<uint64_t*>(array);
-	i = 0;
+	pblock = reinterpret_cast<const uint64_t*>(array);
+	size_t i = 0;
 	size_t max = n + 1 - Tsize;
 	if (max < n)
 	for (; i < max; i += Tsize) {

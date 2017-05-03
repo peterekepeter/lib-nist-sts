@@ -7,19 +7,21 @@ namespace Nist
 	{
 	private:
 		unsigned char* epsilon = nullptr;
-		unsigned char *array = nullptr;
+		unsigned char* array = nullptr;
 		size_t n = 0;
 
+		// clear the memory used by this object
 		void free() {
-			if (epsilon != nullptr)
-			{
-				delete epsilon;
-				epsilon = nullptr;
-			}
+			array = nullptr;
+			epsilon = nullptr;
+			//TODO fix this
 			if (array != nullptr)
 			{
 				delete array;
-				array = nullptr;
+			}
+			if (epsilon != nullptr)
+			{
+				delete epsilon;
 			}
 		}
 
@@ -37,7 +39,7 @@ namespace Nist
 		{
 			n = booleanVector.size();
 			epsilon = new unsigned char[booleanVector.size()];
-			for (int i=0; i<n; i++)
+			for (size_t i=0; i<n; i++)
 			{
 				epsilon[i] = booleanVector[i];
 			}
@@ -48,12 +50,12 @@ namespace Nist
 			free();
 		}
 
-		unsigned char* GetEpsilon()
+		const unsigned char* GetEpsilon() 
 		{
 			return epsilon;
 		}
 
-		unsigned char* GetArray()
+		const unsigned char* GetArray()
 		{
 			if (array == nullptr)
 			{
@@ -87,6 +89,40 @@ namespace Nist
 			}
 			return false;
 		}
+
+
+		BitSequence(const BitSequence& other) = delete;
+
+		BitSequence(BitSequence&& other) noexcept
+			: epsilon(other.epsilon),
+			array(other.array),
+			n(other.n)
+		{
+			other.epsilon = nullptr;
+			other.array = nullptr;
+			other.n = 0;
+		}
+
+		BitSequence& operator=(const BitSequence& other) = delete;
+
+		// move assignent
+		BitSequence& operator=(BitSequence&& other) noexcept
+		{
+			if (this == &other)
+				return *this;
+			// free this if necessarry
+			free();
+			// steal data pointers from other
+			epsilon = other.epsilon;
+			array = other.array;
+			n = other.n;
+			// set other's pointers to null
+			other.epsilon = nullptr;
+			other.array = nullptr;
+			other.n = 0;
+			return *this;
+		}
+
 	};
 
 
