@@ -164,7 +164,7 @@
     <ClCompile Include="BitSequenceUnitTest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\libNIST\libNIST.vcxproj">
+    <ProjectReference Include="..\LibNistSts\LibNistSts.vcxproj">
       <Project>{8def6cf0-bee4-4208-8b37-6d5bb8fe3510}</Project>
     </ProjectReference>
   </ItemGroup>

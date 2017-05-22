@@ -1,10 +1,10 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include <vector>
-#include "../libNIST/BitSequence.h"
-#include "../libNIST/Parameters.h"
-#include "../libNIST/Test.h"
-#include "../libNIST/stat_fncs.h"
+#include "../LibNistSts/BitSequence.h"
+#include "../LibNistSts/Parameters.h"
+#include "../LibNistSts/Test.h"
+#include "../LibNistSts/stat_fncs.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

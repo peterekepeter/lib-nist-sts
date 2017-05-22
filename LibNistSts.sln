@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Console", "Console\Console.vcxproj", "{5326A80C-72F0-494D-B13F-ACC636925C49}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libNIST", "libNIST\libNIST.vcxproj", "{8DEF6CF0-BEE4-4208-8B37-6D5BB8FE3510}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LibNistSts", "LibNistSts\LibNistSts.vcxproj", "{8DEF6CF0-BEE4-4208-8B37-6D5BB8FE3510}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libNISTtest", "libNISTtest\libNISTtest.vcxproj", "{080715A7-4062-4B08-AAF2-E8B032309F75}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestLibNistSts", "TestLibNistSts\TestLibNistSts.vcxproj", "{080715A7-4062-4B08-AAF2-E8B032309F75}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

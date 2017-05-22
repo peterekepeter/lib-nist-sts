@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 #include <vector>
-#include "../libNIST/BitSequence.h"
+#include "../LibNistSts/BitSequence.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
