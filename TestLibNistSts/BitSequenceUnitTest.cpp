@@ -40,5 +40,26 @@ namespace libNISTtest
 			Assert::IsTrue(sequence2.GetEpsilon() != nullptr, L"New sequence should have data.");
 			Assert::IsTrue(sequence2.GetN() == 4, L"GetN() for new sequence should return 4.");
 		}
+
+		TEST_METHOD(BitSequenceArrayOperator)
+		{
+			using BitSequence = Nist::BitSequence;
+			BitSequence a(16);
+			for (int i=0; i<16; i++)
+			{
+				a[i] = i & 1;
+			}
+			for (int i=0; i<16; i++)
+			{
+				if (i&1)
+				{
+					Assert::IsTrue(a[i]);
+				} 
+				else
+				{
+					Assert::IsFalse(a[i]);
+				}
+			}
+		}
 	};
 }
