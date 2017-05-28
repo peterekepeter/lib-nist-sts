@@ -1,4 +1,5 @@
 #pragma once
+#include "../Test.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 S T A T I S T I C A L  T E S T  F U N C T I O N  P R O T O T Y P E S
@@ -35,8 +36,6 @@ S T A T I S T I C A L  T E S T  F U N C T I O N  P R O T O T Y P E S
 #define	LinearComplexity_v2 LinearComplexity3 //2,3
 #define	Serial_v1 Serial
 #define	Serial_v2 Serial4 //2,4
-
-#include "Test.h"
 
 //original functions
 
