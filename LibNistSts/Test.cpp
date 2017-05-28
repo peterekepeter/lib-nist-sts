@@ -1,5 +1,5 @@
 #include "Test.h"
-#include "stat_fncs.h"
+#include "common/stat_fncs.h"
 
 
 Nist::Results::Frequency& Nist::Test::RunFrequency()

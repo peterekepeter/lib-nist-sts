@@ -19,18 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lut.h" />
     <ClInclude Include="BitSequence.h" />
+    <ClInclude Include="common\stat_fncs.h" />
+    <ClInclude Include="optimized\lut.h" />
+    <ClInclude Include="optimized\tools.h" />
     <ClInclude Include="Parameters.h" />
-    <ClInclude Include="stat_fncs.h" />
     <ClInclude Include="Results.h" />
     <ClInclude Include="Test.h" />
-    <ClInclude Include="tools.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitSequence.cpp" />
-    <ClCompile Include="frequency.cpp" />
-    <ClCompile Include="lut.cpp" />
+    <ClCompile Include="optimized\frequency-opt.cpp" />
+    <ClCompile Include="optimized\lut.cpp" />
+    <ClCompile Include="original\frequency.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

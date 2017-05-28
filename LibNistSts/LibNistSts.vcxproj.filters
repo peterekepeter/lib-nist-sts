@@ -13,23 +13,23 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\NIST">
-      <UniqueIdentifier>{c1a2393d-9733-483a-8827-a83f57522e30}</UniqueIdentifier>
+    <Filter Include="Source Files\original">
+      <UniqueIdentifier>{dc6d0d70-aff9-4627-b653-f61338b4fb0f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\NIST">
-      <UniqueIdentifier>{20c0c8fd-5ba3-42ac-be1c-b8507c6c2fb6}</UniqueIdentifier>
+    <Filter Include="Source Files\optimized">
+      <UniqueIdentifier>{afa3a8aa-94d9-4905-a298-aea51ca3d64b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\original">
+      <UniqueIdentifier>{5ddb212d-7f36-40a2-91b7-56350402a0ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\optimized">
+      <UniqueIdentifier>{5852c05d-8774-4ac5-bdfb-ef280e02bbf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{5379aa25-d9d2-4224-9c5a-2de3d852809c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stat_fncs.h">
-      <Filter>Header Files\NIST</Filter>
-    </ClInclude>
-    <ClInclude Include="lut.h">
-      <Filter>Header Files\NIST</Filter>
-    </ClInclude>
-    <ClInclude Include="tools.h">
-      <Filter>Header Files\NIST</Filter>
-    </ClInclude>
     <ClInclude Include="Parameters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -42,19 +42,31 @@
     <ClInclude Include="BitSequence.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="common\stat_fncs.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="optimized\lut.h">
+      <Filter>Header Files\optimized</Filter>
+    </ClInclude>
+    <ClInclude Include="optimized\tools.h">
+      <Filter>Header Files\optimized</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lut.cpp">
-      <Filter>Source Files\NIST</Filter>
-    </ClCompile>
-    <ClCompile Include="frequency.cpp">
-      <Filter>Source Files\NIST</Filter>
-    </ClCompile>
     <ClCompile Include="BitSequence.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Test.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\lut.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="original\frequency.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\frequency-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

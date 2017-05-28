@@ -4,7 +4,7 @@
 #include "../LibNistSts/BitSequence.h"
 #include "../LibNistSts/Parameters.h"
 #include "../LibNistSts/Test.h"
-#include "../LibNistSts/stat_fncs.h"
+#include "../LibNistSts/common/stat_fncs.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
