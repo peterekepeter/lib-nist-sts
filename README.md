@@ -21,4 +21,8 @@ My intention is not to steal anyone's work, but to improve on it, so that it can
 
 ## License:
 
-Public domain, see LICENSE.txt
+Some parts of code are from https://github.com/sysox/NIST-STS-optimised and are licensed under a BSD-like license. See the source files to see which files, and which parts of these files.
+
+The original implementation from NIST is public domain, see http://csrc.nist.gov/groups/ST/toolkit/rng/documentation_software.html
+
+The rest of the project are public domain see LICENSE.txt
