@@ -127,7 +127,7 @@ namespace Nist
 			}
 
 			BitRef& operator =(bool value){
-				this->operator=(static_cast<unsigned char>(value == false ? 1 : 0));
+				this->operator=(static_cast<unsigned char>(value == true ? 1 : 0));
 				return *this;
 			}
 

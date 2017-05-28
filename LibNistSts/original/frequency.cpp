@@ -24,7 +24,7 @@ Frequency(Nist::Test& test)
 	//printf("Pval: %lf sum %lf \n", p_value, sum);
 
 	//store results
-	auto& frequency = test.GetResults().frequency;
+	auto& frequency = test.GetWriteableResults().frequency;
 	frequency.sum = sum;
 	frequency.sum_n = sum / n;
 	frequency.p_value = p_value;

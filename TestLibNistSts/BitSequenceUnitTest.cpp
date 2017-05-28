@@ -61,5 +61,30 @@ namespace libNISTtest
 				}
 			}
 		}
+
+
+
+		TEST_METHOD(BitSequenceArrayOperator2)
+		{
+			using BitSequence = Nist::BitSequence;
+			const size_t n = 4;
+			BitSequence a(n);
+			a[0] = true;
+			a[1] = false;
+			a[2] = false;
+			a[3] = true;
+			Assert::IsTrue(a[0]);
+			Assert::IsFalse(a[1]);
+			Assert::IsFalse(a[2]);
+			Assert::IsTrue(a[3]);
+			auto epsilon = a.GetEpsilon();
+			Assert::IsTrue(epsilon[0] == 1);
+			Assert::IsTrue(epsilon[1] == 0);
+			Assert::IsTrue(epsilon[2] == 0);
+			Assert::IsTrue(epsilon[3] == 1);
+			auto array = a.GetArray();
+			auto nibble = array[0] & 15;
+			Assert::IsTrue(nibble == 9);
+		}
 	};
 }

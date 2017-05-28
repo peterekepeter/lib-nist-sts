@@ -51,6 +51,9 @@
     <ClInclude Include="optimized\tools.h">
       <Filter>Header Files\optimized</Filter>
     </ClInclude>
+    <ClInclude Include="original\cephes.h">
+      <Filter>Header Files\original</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitSequence.cpp">
@@ -67,6 +70,15 @@
     </ClCompile>
     <ClCompile Include="optimized\frequency-opt.cpp">
       <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\blockfrequency-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="original\blockfrequency.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\cephes.cpp">
+      <Filter>Source Files\original</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -74,7 +74,7 @@ Frequency2(Nist::Test& test)
 	//printf("Pval: %lf\n",p_value);
 	//printf("%lf ",(double)sum);
 	//store test results
-	auto& frequency = test.GetResults().frequency;
+	auto& frequency = test.GetWriteableResults().frequency;
 	frequency.sum = sum;
 	frequency.sum_n = sum / n;
 	frequency.p_value = p_value;
@@ -151,7 +151,7 @@ Frequency3(Nist::Test& test)
 	f = s_obs / sqrt2;
 	p_value = erfc(f);
 	//store test results
-	auto& frequency = test.GetResults().frequency;
+	auto& frequency = test.GetWriteableResults().frequency;
 	frequency.sum = sum;
 	frequency.sum_n = sum / n;
 	frequency.p_value = p_value;
@@ -235,7 +235,7 @@ Frequency4(Nist::Test& test)
 
 	//printf("Pval: %lf sum %lf\n", p_value, sum);
 	//store test results
-	auto& frequency = test.GetResults().frequency;
+	auto& frequency = test.GetWriteableResults().frequency;
 	frequency.sum = sum;
 	frequency.sum_n = sum / n;
 	frequency.p_value = p_value;

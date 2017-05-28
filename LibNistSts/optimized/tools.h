@@ -32,7 +32,7 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -------------------------------------------------------------------------- */
 
-inline unsigned int get_mask(int size) {
+inline size_t get_mask(size_t size) {
 	return (1 << size) - 1;
 }
 

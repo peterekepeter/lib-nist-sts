@@ -2,7 +2,7 @@
 #include "common/stat_fncs.h"
 
 
-Nist::Results::Frequency& Nist::Test::RunFrequency()
+const Nist::Results::Frequency& Nist::Test::RunFrequency()
 {
 	if (this->parameters->fast == 0)
 	{
@@ -13,4 +13,24 @@ Nist::Results::Frequency& Nist::Test::RunFrequency()
 		Frequency_v2(*this);
 	}
 	return results->frequency;
+}
+
+const Nist::Results::BlockFrequency& Nist::Test::RunBlockFrequency()
+{
+	if (this->parameters->fast == 0)
+	{
+		BlockFrequency(*this);
+	}
+	else
+	{
+		BlockFrequency4(*this);
+	}
+	return results->blockfrequency;
+}
+
+const Nist::Results& Nist::Test::RunAll()
+{
+	this->RunFrequency();
+	this->RunBlockFrequency();
+	return *results;
 }

@@ -40,7 +40,7 @@ S T A T I S T I C A L  T E S T  F U N C T I O N  P R O T O T Y P E S
 //original functions
 
 void	Frequency(Nist::Test& test);
-void	BlockFrequency(int M, int n);
+void	BlockFrequency(Nist::Test& test);
 void	CumulativeSums(int n);
 void	Runs(int n);
 void	LongestRunOfOnes(int n);
@@ -59,7 +59,7 @@ void	Serial(int m, int n);
 
 //versions published in SPACE 2014 - "Faster randomness testing with the NIST STS"
 void	Frequency2(Nist::Test& test);
-void	BlockFrequency2(int M, int n);
+void	BlockFrequency2(Nist::Test& test);
 void	CumulativeSums2(int n);
 void	Runs2(int n);
 void	LongestRunOfOnes2(int n);
@@ -75,7 +75,7 @@ void	LinearComplexity2(int M, int n);
 void	Serial2(int m, int n);
 // Journal 
 void	Frequency3(Nist::Test& test);
-void	BlockFrequency3(int M, int n);
+void	BlockFrequency3(Nist::Test& test);
 void	CumulativeSums3(int n);
 void	Runs3(int n);
 void	LongestRunOfOnes3(int n);
@@ -87,7 +87,7 @@ void	LinearComplexity3(int M, int n);
 //version 4 and more
 void	DiscreteFourierTransform4(int n);
 
-void	BlockFrequency4(int M, int n);
+void	BlockFrequency4(Nist::Test& test);
 void	Runs4();
 void	Serial4(int m, int n);
 void	Frequency4(Nist::Test& test);

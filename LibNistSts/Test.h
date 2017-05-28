@@ -67,12 +67,26 @@ namespace Nist
 			return n1 < n2 ? n1 : n2;
 		}
 
-		Results& GetResults()
+		const Results& GetResults() const
 		{
 			return *results;
 		}
 
-		Results::Frequency& RunFrequency();
+		Results& GetWriteableResults()
+		{
+			return *results;
+		}
+
+		const Parameters& GetParameters() const
+		{
+			return *parameters;
+		}
+
+		const Results::Frequency& RunFrequency();
+
+		const Results::BlockFrequency& RunBlockFrequency();
+
+		const Results& RunAll();
 
 
 	private:

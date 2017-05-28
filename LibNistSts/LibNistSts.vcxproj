@@ -23,14 +23,18 @@
     <ClInclude Include="common\stat_fncs.h" />
     <ClInclude Include="optimized\lut.h" />
     <ClInclude Include="optimized\tools.h" />
+    <ClInclude Include="original\cephes.h" />
     <ClInclude Include="Parameters.h" />
     <ClInclude Include="Results.h" />
     <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitSequence.cpp" />
+    <ClCompile Include="optimized\blockfrequency-opt.cpp" />
     <ClCompile Include="optimized\frequency-opt.cpp" />
     <ClCompile Include="optimized\lut.cpp" />
+    <ClCompile Include="original\blockfrequency.cpp" />
+    <ClCompile Include="original\cephes.cpp" />
     <ClCompile Include="original\frequency.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>

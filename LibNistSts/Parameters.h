@@ -8,7 +8,7 @@ namespace Nist
 	{
 	public:
 		size_t  n = std::numeric_limits<size_t>::max(); // default: = std::numeric_limits<size_t>.max()
-		int		blockFrequencyBlockLength = 128;
+		size_t		blockFrequencyBlockLength = 128;
 		int		nonOverlappingTemplateBlockLength = 9;
 		int		overlappingTemplateBlockLength = 9;
 		int		serialBlockLength = 16;
