@@ -80,5 +80,11 @@
     <ClCompile Include="original\cephes.cpp">
       <Filter>Source Files\original</Filter>
     </ClCompile>
+    <ClCompile Include="original\cusums.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\cusums-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

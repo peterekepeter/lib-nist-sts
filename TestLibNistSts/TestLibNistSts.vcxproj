@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BlockFrequencyUnitTest.cpp" />
+    <ClCompile Include="CusumUnitTest.cpp" />
     <ClCompile Include="FrequencyUnitTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

@@ -31,10 +31,12 @@
   <ItemGroup>
     <ClCompile Include="BitSequence.cpp" />
     <ClCompile Include="optimized\blockfrequency-opt.cpp" />
+    <ClCompile Include="optimized\cusums-opt.cpp" />
     <ClCompile Include="optimized\frequency-opt.cpp" />
     <ClCompile Include="optimized\lut.cpp" />
     <ClCompile Include="original\blockfrequency.cpp" />
     <ClCompile Include="original\cephes.cpp" />
+    <ClCompile Include="original\cusums.cpp" />
     <ClCompile Include="original\frequency.cpp" />
     <ClCompile Include="Test.cpp" />
   </ItemGroup>

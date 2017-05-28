@@ -28,7 +28,7 @@ namespace libNISTtest
 			return Nist::BitSequence(data);
 		}
 
-		// compare each version of frequency test
+		// compare each version of blockfrequency test
 		TEST_METHOD(BlockFrequencyCompareVersions)
 		{
 			auto seq = GetSeqLcg(4096);

@@ -1,10 +1,10 @@
 
-#include "../Test.h"
-#include "../original/cephes.h"
-
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 B L O C K  F R E Q U E N C Y  T E S T
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+#include "../Test.h"
+#include "../original/cephes.h"
 
 void
 BlockFrequency(Nist::Test& test)
