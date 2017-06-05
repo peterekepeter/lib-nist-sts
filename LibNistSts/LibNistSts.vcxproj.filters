@@ -65,31 +65,37 @@
     <ClCompile Include="optimized\lut.cpp">
       <Filter>Source Files\optimized</Filter>
     </ClCompile>
-    <ClCompile Include="original\frequency.cpp">
-      <Filter>Source Files\original</Filter>
-    </ClCompile>
-    <ClCompile Include="optimized\frequency-opt.cpp">
-      <Filter>Source Files\optimized</Filter>
-    </ClCompile>
-    <ClCompile Include="optimized\blockfrequency-opt.cpp">
-      <Filter>Source Files\optimized</Filter>
-    </ClCompile>
-    <ClCompile Include="original\blockfrequency.cpp">
-      <Filter>Source Files\original</Filter>
-    </ClCompile>
     <ClCompile Include="original\cephes.cpp">
       <Filter>Source Files\original</Filter>
-    </ClCompile>
-    <ClCompile Include="original\cusums.cpp">
-      <Filter>Source Files\original</Filter>
-    </ClCompile>
-    <ClCompile Include="optimized\cusums-opt.cpp">
-      <Filter>Source Files\optimized</Filter>
     </ClCompile>
     <ClCompile Include="optimized\test-runs-opt.cpp">
       <Filter>Source Files\optimized</Filter>
     </ClCompile>
     <ClCompile Include="original\test-runs.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-blockfrequency.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-cusums.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-frequency.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-blockfrequency-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-cusums-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-frequency-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-longestrunofones-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-longestrunofones.cpp">
       <Filter>Source Files\original</Filter>
     </ClCompile>
   </ItemGroup>
