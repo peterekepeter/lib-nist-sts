@@ -36,7 +36,16 @@ inline size_t get_mask(size_t size) {
 	return (1 << size) - 1;
 }
 
-inline unsigned int get_nth_block4(const unsigned char* arr, int offset)
+inline unsigned int get_nth_block4(const unsigned char* arr, const int offset)
 {
 	return (*reinterpret_cast<const unsigned int*>(arr + (offset >> 3))) >> (offset & 7);//(array2[(offset >> 3)&3][(offset >> 3)] >> (offset & 7));
+}
+
+inline unsigned int get_nth_block_effect(const unsigned char* arr, const int offset)
+{
+	int shift = (offset & 7);
+	int byte = (offset >> 3);
+	if (shift == 0) return (*(unsigned int*)(arr + byte) >> shift);
+	else return (*reinterpret_cast<const unsigned int*>(arr + byte) >> shift) ^ (*(unsigned int*)(arr + byte + 4) << (32 - shift));
+
 }

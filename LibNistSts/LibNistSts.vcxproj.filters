@@ -86,5 +86,11 @@
     <ClCompile Include="optimized\cusums-opt.cpp">
       <Filter>Source Files\optimized</Filter>
     </ClCompile>
+    <ClCompile Include="optimized\test-runs-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-runs.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
