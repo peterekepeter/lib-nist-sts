@@ -125,5 +125,11 @@
     <ClCompile Include="optimized\test-discretefouriertransform-opt.cpp">
       <Filter>Source Files\optimized</Filter>
     </ClCompile>
+    <ClCompile Include="optimized\test-overlappingtemplatematchings-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-overlappingtemplatematchings.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

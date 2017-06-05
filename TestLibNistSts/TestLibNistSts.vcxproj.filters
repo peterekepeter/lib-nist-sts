@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\StatisticalTests">
+      <UniqueIdentifier>{4e25f697-8ba1-427e-93a7-42d5845620cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -29,26 +32,29 @@
     <ClCompile Include="BitSequenceUnitTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FrequencyUnitTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="BlockFrequencyUnitTest.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\StatisticalTests</Filter>
     </ClCompile>
     <ClCompile Include="CusumUnitTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RunsUnitTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="LongestRunOfOnesTest.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RankUnitTest.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\StatisticalTests</Filter>
     </ClCompile>
     <ClCompile Include="DiscreteFourierTransformUnitTest.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="FrequencyUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlappingTemplateMatchingsUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestRunOfOnesTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="RankUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="RunsUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

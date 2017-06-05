@@ -159,6 +159,7 @@
     <ClCompile Include="DiscreteFourierTransformUnitTest.cpp" />
     <ClCompile Include="FrequencyUnitTest.cpp" />
     <ClCompile Include="LongestRunOfOnesTest.cpp" />
+    <ClCompile Include="OverlappingTemplateMatchingsUnitTest.cpp" />
     <ClCompile Include="RankUnitTest.cpp" />
     <ClCompile Include="RunsUnitTest.cpp" />
     <ClCompile Include="stdafx.cpp">

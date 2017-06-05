@@ -39,6 +39,7 @@
     <ClCompile Include="optimized\test-discretefouriertransform-opt.cpp" />
     <ClCompile Include="optimized\test-frequency-opt.cpp" />
     <ClCompile Include="optimized\test-longestrunofones-opt.cpp" />
+    <ClCompile Include="optimized\test-overlappingtemplatematchings-opt.cpp" />
     <ClCompile Include="optimized\test-rank-opt.cpp" />
     <ClCompile Include="optimized\test-runs-opt.cpp" />
     <ClCompile Include="original\cephes.cpp" />
@@ -48,6 +49,7 @@
     <ClCompile Include="original\test-discretefouriertransform.cpp" />
     <ClCompile Include="original\test-frequency.cpp" />
     <ClCompile Include="original\test-longestrunofones.cpp" />
+    <ClCompile Include="original\test-overlappingtemplatematchings.cpp" />
     <ClCompile Include="original\test-rank.cpp" />
     <ClCompile Include="original\test-runs.cpp" />
     <ClCompile Include="Test.cpp" />

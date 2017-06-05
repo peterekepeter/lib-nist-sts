@@ -47,7 +47,7 @@ void	LongestRunOfOnes(Nist::Test& test);
 void	Rank(Nist::Test& test);
 void	DiscreteFourierTransform(Nist::Test& test);
 void	NonOverlappingTemplateMatchings(int m, int n);
-void	OverlappingTemplateMatchings(int m, int n);
+void	OverlappingTemplateMatchings(Nist::Test& test);
 void	Universal(int n);
 void	ApproximateEntropy(int m, int n);
 void	RandomExcursions(int n);
@@ -66,7 +66,7 @@ void	LongestRunOfOnes2(Nist::Test& test);
 void	Rank2(Nist::Test& test);
 void	DiscreteFourierTransform2(Nist::Test& test);
 void	NonOverlappingTemplateMatchings2(int m, int n);
-void	OverlappingTemplateMatchings2(int m, int n);
+void	OverlappingTemplateMatchings2(Nist::Test& test);
 void	Universal2(int n);
 void	ApproximateEntropy2(int m, int n);
 void	RandomExcursions2(int n);
@@ -81,7 +81,7 @@ void	CumulativeSums3(Nist::Test& test);
 void	Runs3(Nist::Test& test);
 void	LongestRunOfOnes3(Nist::Test& test);
 // void	DiscreteFourierTransform3(int n);
-void	OverlappingTemplateMatchings3(int m, int n);
+void	OverlappingTemplateMatchings3(Nist::Test& test);
 
 void	LinearComplexity3(int M, int n);
 
@@ -94,7 +94,7 @@ void	Serial4(int m, int n);
 void	Frequency4(Nist::Test& test);
 void	ApproximateEntropy4(int m, int n);
 
-void	OverlappingTemplateMatchings4(int m, int n);
+void	OverlappingTemplateMatchings4(Nist::Test& test);
 void    NonOverlappingTemplateMatchings4(int m, int n);
 
 
