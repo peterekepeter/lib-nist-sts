@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BitSequence.h" />
+    <ClInclude Include="common\dfft.h" />
     <ClInclude Include="common\stat_fncs.h" />
     <ClInclude Include="optimized\lut.h" />
     <ClInclude Include="optimized\tools.h" />
@@ -31,9 +32,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitSequence.cpp" />
+    <ClCompile Include="common\dfft.cpp" />
     <ClCompile Include="optimized\lut.cpp" />
     <ClCompile Include="optimized\test-blockfrequency-opt.cpp" />
     <ClCompile Include="optimized\test-cusums-opt.cpp" />
+    <ClCompile Include="optimized\test-discretefouriertransform-opt.cpp" />
     <ClCompile Include="optimized\test-frequency-opt.cpp" />
     <ClCompile Include="optimized\test-longestrunofones-opt.cpp" />
     <ClCompile Include="optimized\test-rank-opt.cpp" />
@@ -42,6 +45,7 @@
     <ClCompile Include="original\rank-matrix.cpp" />
     <ClCompile Include="original\test-blockfrequency.cpp" />
     <ClCompile Include="original\test-cusums.cpp" />
+    <ClCompile Include="original\test-discretefouriertransform.cpp" />
     <ClCompile Include="original\test-frequency.cpp" />
     <ClCompile Include="original\test-longestrunofones.cpp" />
     <ClCompile Include="original\test-rank.cpp" />

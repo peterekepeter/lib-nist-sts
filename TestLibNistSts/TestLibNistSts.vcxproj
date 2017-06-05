@@ -156,6 +156,7 @@
   <ItemGroup>
     <ClCompile Include="BlockFrequencyUnitTest.cpp" />
     <ClCompile Include="CusumUnitTest.cpp" />
+    <ClCompile Include="DiscreteFourierTransformUnitTest.cpp" />
     <ClCompile Include="FrequencyUnitTest.cpp" />
     <ClCompile Include="LongestRunOfOnesTest.cpp" />
     <ClCompile Include="RankUnitTest.cpp" />

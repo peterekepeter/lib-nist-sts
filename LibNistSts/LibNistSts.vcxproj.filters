@@ -28,6 +28,9 @@
     <Filter Include="Header Files\common">
       <UniqueIdentifier>{5379aa25-d9d2-4224-9c5a-2de3d852809c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{69e8781c-d75f-4725-8865-98a4252b2611}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Parameters.h">
@@ -56,6 +59,9 @@
     </ClInclude>
     <ClInclude Include="original\rank-matrix.h">
       <Filter>Header Files\original</Filter>
+    </ClInclude>
+    <ClInclude Include="common\dfft.h">
+      <Filter>Header Files\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +115,15 @@
     </ClCompile>
     <ClCompile Include="original\test-rank.cpp">
       <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="common\dfft.cpp">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-discretefouriertransform.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-discretefouriertransform-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
