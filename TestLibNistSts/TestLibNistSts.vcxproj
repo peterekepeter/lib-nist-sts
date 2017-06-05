@@ -158,6 +158,7 @@
     <ClCompile Include="CusumUnitTest.cpp" />
     <ClCompile Include="FrequencyUnitTest.cpp" />
     <ClCompile Include="LongestRunOfOnesTest.cpp" />
+    <ClCompile Include="RankUnitTest.cpp" />
     <ClCompile Include="RunsUnitTest.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

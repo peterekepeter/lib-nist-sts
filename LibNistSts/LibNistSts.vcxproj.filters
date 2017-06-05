@@ -54,6 +54,9 @@
     <ClInclude Include="original\cephes.h">
       <Filter>Header Files\original</Filter>
     </ClInclude>
+    <ClInclude Include="original\rank-matrix.h">
+      <Filter>Header Files\original</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitSequence.cpp">
@@ -96,6 +99,15 @@
       <Filter>Source Files\optimized</Filter>
     </ClCompile>
     <ClCompile Include="original\test-longestrunofones.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-rank-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="original\rank-matrix.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-rank.cpp">
       <Filter>Source Files\original</Filter>
     </ClCompile>
   </ItemGroup>
