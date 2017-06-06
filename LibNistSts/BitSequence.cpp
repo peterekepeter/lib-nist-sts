@@ -1,8 +1,8 @@
 #include "BitSequence.h"
 
-void Nist::BitSequence::convert_epsilon_to_array(int n)
+void Nist::BitSequence::convert_epsilon_to_array()
 {
-	int byte_size, i, bytes, j;
+	size_t byte_size, i, bytes, j;
 
 	bytes = n >> 3;
 

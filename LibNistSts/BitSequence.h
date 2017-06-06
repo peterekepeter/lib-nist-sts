@@ -26,7 +26,7 @@ namespace Nist
 		}
 
 		// convert from epsilon representation to array represetntation
-		void convert_epsilon_to_array(int n);
+		void convert_epsilon_to_array();
 		void convert_array_to_epsilon();
 		void AllocateArrayIfNull();
 
@@ -197,7 +197,7 @@ namespace Nist
 			{
 				if (epsilon != nullptr)
 				{
-					convert_epsilon_to_array(n);
+					convert_epsilon_to_array();
 				}
 			}
 			return array;
