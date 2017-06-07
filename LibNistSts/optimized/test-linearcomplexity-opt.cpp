@@ -1,6 +1,6 @@
 
 #include "../Test.h"
-#include "../original/cephes.h"
+#include "../common/cephes.h"
 #include "tools.h"
 #include "bm.h"
 #include "bma.h"

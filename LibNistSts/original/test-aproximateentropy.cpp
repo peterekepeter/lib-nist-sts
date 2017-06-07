@@ -1,6 +1,6 @@
 
 #include "../Test.h"
-#include "../original/cephes.h"
+#include "../common/cephes.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 A P P R O X I M A T E  E N T R O P Y   T E S T

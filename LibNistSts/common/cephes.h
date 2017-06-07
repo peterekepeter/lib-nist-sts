@@ -2,6 +2,8 @@
 #ifndef _CEPHES_H_
 #define _CEPHES_H_
 
+// seems to be copied from http://www.netlib.org/cephes/doubldoc.html
+
 double cephes_igamc(double a, double x);
 double cephes_igam(double a, double x);
 double cephes_lgam(double x);

@@ -1,6 +1,6 @@
 
 #include "../Test.h"
-#include "../original/cephes.h"
+#include "../common/cephes.h"
 #include "tools.h"
 
 #define MAXNUMOFTEMPLATES				148		/* APERIODIC TEMPLATES: 148=>temp_length=9 */

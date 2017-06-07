@@ -1,6 +1,6 @@
 
 #include "../Test.h"
-#include "../original/cephes.h"
+#include "../common/cephes.h"
 
 //100MB - M=1000 927sec
 //		  M=5000 4500sec

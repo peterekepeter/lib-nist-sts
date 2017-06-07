@@ -1,5 +1,5 @@
 
-#include "cephes.h"
+#include "../common/cephes.h"
 #include "../Test.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *

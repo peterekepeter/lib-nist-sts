@@ -4,7 +4,7 @@ C U M U L A T I V E  S U M S  T E S T
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
 #include "../Test.h"
-#include "../original/cephes.h"
+#include "../common/cephes.h"
 #include "tools.h"
 #include "lut.h"
 

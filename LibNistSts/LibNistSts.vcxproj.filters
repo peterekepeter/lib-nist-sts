@@ -54,9 +54,6 @@
     <ClInclude Include="optimized\tools.h">
       <Filter>Header Files\optimized</Filter>
     </ClInclude>
-    <ClInclude Include="original\cephes.h">
-      <Filter>Header Files\original</Filter>
-    </ClInclude>
     <ClInclude Include="original\rank-matrix.h">
       <Filter>Header Files\original</Filter>
     </ClInclude>
@@ -68,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="optimized\bma.h">
       <Filter>Header Files\optimized</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cephes.h">
+      <Filter>Header Files\common</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

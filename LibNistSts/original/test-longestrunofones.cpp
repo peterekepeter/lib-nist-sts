@@ -1,6 +1,6 @@
 
 #include "../Test.h"
-#include "cephes.h"
+#include "../common/cephes.h"
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 L O N G E S T  R U N S  T E S T

@@ -20,13 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BitSequence.h" />
+    <ClInclude Include="common\cephes.h" />
     <ClInclude Include="common\dfft.h" />
     <ClInclude Include="common\stat_fncs.h" />
     <ClInclude Include="optimized\bm.h" />
     <ClInclude Include="optimized\bma.h" />
     <ClInclude Include="optimized\lut.h" />
     <ClInclude Include="optimized\tools.h" />
-    <ClInclude Include="original\cephes.h" />
     <ClInclude Include="original\rank-matrix.h" />
     <ClInclude Include="Parameters.h" />
     <ClInclude Include="Results.h" />

@@ -1,6 +1,6 @@
 
 #include "../Test.h"
-#include "../original/cephes.h"
+#include "../common/cephes.h"
 
 static double psi2(int m, int n, const unsigned char* epsilon);
 
