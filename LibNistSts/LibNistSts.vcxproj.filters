@@ -63,6 +63,12 @@
     <ClInclude Include="common\dfft.h">
       <Filter>Header Files\common</Filter>
     </ClInclude>
+    <ClInclude Include="optimized\bm.h">
+      <Filter>Header Files\optimized</Filter>
+    </ClInclude>
+    <ClInclude Include="optimized\bma.h">
+      <Filter>Header Files\optimized</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitSequence.cpp">
@@ -130,6 +136,54 @@
     </ClCompile>
     <ClCompile Include="original\test-overlappingtemplatematchings.cpp">
       <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-nonoverlappingtemplatematchings-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-randomexcursionsvariant-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-serial-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-linearcomplexity-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-randomexcursions-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-aproximateentropy-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\test-universal-opt.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-aproximateentropy.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-linearcomplexity.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-nonoverlappingtemplatematchings.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-randomexcursions.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-randomexcursionsvariant.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-serial.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="original\test-universal.cpp">
+      <Filter>Source Files\original</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\bm.cpp">
+      <Filter>Source Files\optimized</Filter>
+    </ClCompile>
+    <ClCompile Include="optimized\bma.cpp">
+      <Filter>Source Files\optimized</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

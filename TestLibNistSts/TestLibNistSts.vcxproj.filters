@@ -56,5 +56,26 @@
     <ClCompile Include="RunsUnitTest.cpp">
       <Filter>Source Files\StatisticalTests</Filter>
     </ClCompile>
+    <ClCompile Include="UniversalUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="SerialUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomExcursionsUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomExcursionsVariantUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="AproximateEntropyUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="LinearComplexityUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
+    <ClCompile Include="NonOverlappingTemplateMatchingsUnitTest.cpp">
+      <Filter>Source Files\StatisticalTests</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

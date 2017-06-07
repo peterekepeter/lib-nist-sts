@@ -1,5 +1,3 @@
-#pragma once
-
 /* --------------------------------------------------------------------------
 
 The following code is distributed under the following BSD-style license:
@@ -32,63 +30,41 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -------------------------------------------------------------------------- */
 
-inline size_t get_mask(size_t size) {
-	return (1 << size) - 1;
-}
 
-inline unsigned int get_nth_block4(const unsigned char* arr, const int offset)
-{
-	return (*reinterpret_cast<const unsigned int*>(arr + (offset >> 3))) >> (offset & 7);//(array2[(offset >> 3)&3][(offset >> 3)] >> (offset & 7));
-}
+#ifndef _BM_H_
+#define _BM_H_
+#include "tools.h"
 
-inline unsigned int get_nth_block_effect(const unsigned char* arr, const int offset)
-{
-	int shift = (offset & 7);
-	int byte = (offset >> 3);
-	if (shift == 0) return (*(unsigned int*)(arr + byte) >> shift);
-	else return (*reinterpret_cast<const unsigned int*>(arr + byte) >> shift) ^ (*(unsigned int*)(arr + byte + 4) << (32 - shift));
-}
 
-inline int Mirrored_int(unsigned int val, int m) {
-	int res = 0, i;
-	for (i = 0; i < m; i++)
-	{
-		if (val & (1 << i)) res += (1 << (m - 1 - i));
-	}
-	return res;
-}
+/*typedef unsigned int type;
 
-inline void Histogram(int bitstart, int* P, int m, int bitend, const unsigned char* array) {
-	int help, mask, i;
-	const unsigned char* pbyte;
 
-	mask = (1 << m) - 1;
+typedef struct mybitset{
+type *array;
+int first, last;
+int size,array_size;
+} mybitset;
 
-	i = bitstart;
-	while (i % 8 != 0 && i <  bitend - m + 1) {
-		help = get_nth_block4(array, i);
-		++P[help & mask];
-		i++;
-	}
 
-	pbyte = array + i / 8;
-	help = get_nth_block4(array, i);
 
-	for (; i < bitend - m + 1 - 8; i += 8) {
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
+void set_bit(mybitset* bitset,int index);
+void clear(mybitset* bitset);
+void resize(mybitset* bitset, int new_size);
+void left_shift(mybitset* bitset, int bits, int from, int to);
 
-		++P[help & mask];
-		help = *(unsigned int*)(++pbyte);
-	}
+void XOR(mybitset* a, mybitset* b, int from, int to);
+void copy(mybitset* a, mybitset* b, int from, int to);
 
-	for (; i < bitend - m + 1; i++) {
-		help = get_nth_block4(array, i);
-		++P[help & mask];
-	}
-}
+void rand_array(mybitset* bitset);
+int BM(mybitset bitstream, int N);
+*/
+typedef unsigned int type;
+void print_bits(unsigned char c);
+void array_as_bits(unsigned char* c, int byte_size);
+
+void left_shift(type* array, int array_size, int from, int to);
+void copy(type* array, type* b, int array_size, int from, int to);
+void XOR(type* array, type* b, int array_size, int from, int to);
+int BM_c(type* bitstream, int N, type* c, type *b, type* t);
+
+#endif

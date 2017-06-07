@@ -1,5 +1,3 @@
-#pragma once
-
 /* --------------------------------------------------------------------------
 
 The following code is distributed under the following BSD-style license:
@@ -32,63 +30,104 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -------------------------------------------------------------------------- */
 
-inline size_t get_mask(size_t size) {
-	return (1 << size) - 1;
-}
+#include <string.h>
+#include "BMA.h"
 
-inline unsigned int get_nth_block4(const unsigned char* arr, const int offset)
+#ifdef _MSC_VER
+#pragma warning(disable:4146)
+#endif
+int log2debruins(unsigned int c)
 {
-	return (*reinterpret_cast<const unsigned int*>(arr + (offset >> 3))) >> (offset & 7);//(array2[(offset >> 3)&3][(offset >> 3)] >> (offset & 7));
-}
 
-inline unsigned int get_nth_block_effect(const unsigned char* arr, const int offset)
-{
-	int shift = (offset & 7);
-	int byte = (offset >> 3);
-	if (shift == 0) return (*(unsigned int*)(arr + byte) >> shift);
-	else return (*reinterpret_cast<const unsigned int*>(arr + byte) >> shift) ^ (*(unsigned int*)(arr + byte + 4) << (32 - shift));
-}
 
-inline int Mirrored_int(unsigned int val, int m) {
-	int res = 0, i;
-	for (i = 0; i < m; i++)
+	static const int MultiplyDeBruijnBitPosition[32] =
 	{
-		if (val & (1 << i)) res += (1 << (m - 1 - i));
+		32, 2, 29, 3, 30, 15, 25, 4, 31, 23, 21, 16, 26, 18, 5, 9,
+		32, 28, 14, 24, 22, 20, 17, 8, 27, 13, 19, 7, 12, 6, 11, 10
+	};
+
+	return MultiplyDeBruijnBitPosition[((unsigned)((c & -c) * 0x077CB531U)) >> 27];
+}
+#ifdef _MSC_VER
+#pragma warning(default:4146)
+#endif
+
+void XORT(BMAint *a, BMAint *b, int Tsize)
+{
+	int i;
+	for (i = 0; i < Tsize; i++)
+	{
+		a[i] ^= b[i];
 	}
-	return res;
 }
 
-inline void Histogram(int bitstart, int* P, int m, int bitend, const unsigned char* array) {
-	int help, mask, i;
-	const unsigned char* pbyte;
-
-	mask = (1 << m) - 1;
-
-	i = bitstart;
-	while (i % 8 != 0 && i <  bitend - m + 1) {
-		help = get_nth_block4(array, i);
-		++P[help & mask];
-		i++;
+void CPYT(BMAint *a, BMAint *b, int Tsize)
+{
+	int i;
+	for (i = 0; i < Tsize; i++)
+	{
+		a[i] = b[i];
 	}
+}
 
-	pbyte = array + i / 8;
-	help = get_nth_block4(array, i);
 
-	for (; i < bitend - m + 1 - 8; i += 8) {
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-
-		++P[help & mask];
-		help = *(unsigned int*)(++pbyte);
+void SETT(BMAint *a, int Tsize)
+{
+	int i;
+	BMAint zero = 0;
+	for (i = 0; i < Tsize; i++)
+	{
+		a[i] ^= zero;
 	}
+}
 
-	for (; i < bitend - m + 1; i++) {
-		help = get_nth_block4(array, i);
-		++P[help & mask];
+
+void LSHIFTT(BMAint *a, int shift, int Tsize)
+{
+	int i;
+	int com = sizeof(BMAint) * 8 - shift;
+	for (i = 0; i < Tsize; i++)
+	{
+		a[i] = (a[i] >> shift) ^ (a[i + 1] << com);
 	}
+}
+
+
+int BM_JOURNAL(BMAint  *d_b, BMAint  *d_c, BMAint  *d_t, BMAint *S, int
+	n) {
+
+	static const int numbitsT = sizeof(BMAint) * 8, Tbytes = sizeof(BMAint);
+	int L, Tsize, shift = 2, i;
+
+	Tsize = (n + numbitsT - 1) / numbitsT;
+
+	memset(d_b, 0, Tsize*Tbytes);
+	memcpy(d_c, S, Tsize*Tbytes);
+
+	L = 0;
+
+	for (i = 0; i < n; i++) {
+
+		if (d_c[0] & 1)
+		{
+			memcpy(d_t, d_c, Tsize*Tbytes);
+			//CPY(d_t,d_c,Tsize);
+
+			XORT(d_c, d_b, Tsize);
+			if (L <= i / 2)
+			{
+				memcpy(d_b, d_t, Tsize*Tbytes);
+				//CPY(d_b,d_t,Tsize);
+				L = i + 1 - L;
+			}
+		}
+
+
+		shift = log2debruins(((*(unsigned int*)d_c) | 1) ^ 1);
+		LSHIFTT(d_c, shift - 1, Tsize);
+		i += shift - 2;
+		Tsize = (n + numbitsT - i) / numbitsT;
+
+	}
+	return L;
 }

@@ -1,5 +1,3 @@
-#pragma once
-
 /* --------------------------------------------------------------------------
 
 The following code is distributed under the following BSD-style license:
@@ -32,63 +30,20 @@ THE POSSIBILITY OF SUCH DAMAGE.
 
 -------------------------------------------------------------------------- */
 
-inline size_t get_mask(size_t size) {
-	return (1 << size) - 1;
-}
+#ifndef BMA__H
+#define BMA__H
 
-inline unsigned int get_nth_block4(const unsigned char* arr, const int offset)
-{
-	return (*reinterpret_cast<const unsigned int*>(arr + (offset >> 3))) >> (offset & 7);//(array2[(offset >> 3)&3][(offset >> 3)] >> (offset & 7));
-}
+typedef unsigned int BMAint;
+//typedef unsigned __int64 BMAint;
 
-inline unsigned int get_nth_block_effect(const unsigned char* arr, const int offset)
-{
-	int shift = (offset & 7);
-	int byte = (offset >> 3);
-	if (shift == 0) return (*(unsigned int*)(arr + byte) >> shift);
-	else return (*reinterpret_cast<const unsigned int*>(arr + byte) >> shift) ^ (*(unsigned int*)(arr + byte + 4) << (32 - shift));
-}
+extern BMAint *S;
+extern BMAint *b, *c, *t;
+extern BMAint *d_b, *d_c, *d_t;
 
-inline int Mirrored_int(unsigned int val, int m) {
-	int res = 0, i;
-	for (i = 0; i < m; i++)
-	{
-		if (val & (1 << i)) res += (1 << (m - 1 - i));
-	}
-	return res;
-}
+int log2debruins(unsigned int c);
+void XORT(BMAint *dst, BMAint *a, int num_bits);
+void ANDT(BMAint  *dst, BMAint *a, int num_bits);
+void LSHIFTT(BMAint *source, int size, int bit_shift);
+int BM_JOURNAL(BMAint *b, BMAint *c, BMAint  *t, BMAint  *S, int n);
 
-inline void Histogram(int bitstart, int* P, int m, int bitend, const unsigned char* array) {
-	int help, mask, i;
-	const unsigned char* pbyte;
-
-	mask = (1 << m) - 1;
-
-	i = bitstart;
-	while (i % 8 != 0 && i <  bitend - m + 1) {
-		help = get_nth_block4(array, i);
-		++P[help & mask];
-		i++;
-	}
-
-	pbyte = array + i / 8;
-	help = get_nth_block4(array, i);
-
-	for (; i < bitend - m + 1 - 8; i += 8) {
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-		++P[help & mask]; help >>= 1;
-
-		++P[help & mask];
-		help = *(unsigned int*)(++pbyte);
-	}
-
-	for (; i < bitend - m + 1; i++) {
-		help = get_nth_block4(array, i);
-		++P[help & mask];
-	}
-}
+#endif  

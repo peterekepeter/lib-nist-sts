@@ -46,14 +46,14 @@ void	Runs(Nist::Test& test);
 void	LongestRunOfOnes(Nist::Test& test);
 void	Rank(Nist::Test& test);
 void	DiscreteFourierTransform(Nist::Test& test);
-void	NonOverlappingTemplateMatchings(int m, int n);
+void	NonOverlappingTemplateMatchings(Nist::Test& test);
 void	OverlappingTemplateMatchings(Nist::Test& test);
-void	Universal(int n);
-void	ApproximateEntropy(int m, int n);
-void	RandomExcursions(int n);
-void	RandomExcursionsVariant(int n);
-void	LinearComplexity(int M, int n);
-void	Serial(int m, int n);
+void	Universal(Nist::Test& test);
+void	ApproximateEntropy(Nist::Test& test);
+void	RandomExcursions(Nist::Test& test);
+void	RandomExcursionsVariant(Nist::Test& test);
+void	LinearComplexity(Nist::Test& test);
+void	Serial(Nist::Test& test);
 
 // New functions
 
@@ -65,14 +65,14 @@ void	Runs2(Nist::Test& test);
 void	LongestRunOfOnes2(Nist::Test& test);
 void	Rank2(Nist::Test& test);
 void	DiscreteFourierTransform2(Nist::Test& test);
-void	NonOverlappingTemplateMatchings2(int m, int n);
+void	NonOverlappingTemplateMatchings2(Nist::Test& test);
 void	OverlappingTemplateMatchings2(Nist::Test& test);
-void	Universal2(int n);
-void	ApproximateEntropy2(int m, int n);
-void	RandomExcursions2(int n);
-void	RandomExcursionsVariant2(int n);
-void	LinearComplexity2(int M, int n);
-void	Serial2(int m, int n);
+void	Universal2(Nist::Test& test);
+void	ApproximateEntropy2(Nist::Test& test);
+void	RandomExcursions2(Nist::Test& test);
+void	RandomExcursionsVariant2(Nist::Test& test);
+void	LinearComplexity2(Nist::Test& test);
+void	Serial2(Nist::Test& test);
 
 // Journal 
 void	Frequency3(Nist::Test& test);
@@ -83,19 +83,19 @@ void	LongestRunOfOnes3(Nist::Test& test);
 // void	DiscreteFourierTransform3(int n);
 void	OverlappingTemplateMatchings3(Nist::Test& test);
 
-void	LinearComplexity3(int M, int n);
+void	LinearComplexity3(Nist::Test& test);
 
 //version 4 and more
 // void	DiscreteFourierTransform4(int n);
 
 void	BlockFrequency4(Nist::Test& test);
 void	Runs4(Nist::Test& test);
-void	Serial4(int m, int n);
+void	Serial4(Nist::Test& test);
 void	Frequency4(Nist::Test& test);
-void	ApproximateEntropy4(int m, int n);
+void	ApproximateEntropy4(Nist::Test& test);
 
 void	OverlappingTemplateMatchings4(Nist::Test& test);
-void    NonOverlappingTemplateMatchings4(int m, int n);
+void    NonOverlappingTemplateMatchings4(Nist::Test& test);
 
 
 
