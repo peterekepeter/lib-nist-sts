@@ -46,7 +46,7 @@ namespace libNISTtest
 			auto& result1 = test1.GetResults().approximate_entropy;
 			auto& result2 = test2.GetResults().approximate_entropy;
 			auto& result3 = test3.GetResults().approximate_entropy;
-			for (size_t i = 0; i < 2; i++) {
+			for (size_t i = 0; i < result1.ApEn.size(); i++) {
 				Assert::AreEqual(result1.ApEn[i], result2.ApEn[i], 0.01);
 				Assert::AreEqual(result1.ApEn[i], result3.ApEn[i], 0.01);
 			}

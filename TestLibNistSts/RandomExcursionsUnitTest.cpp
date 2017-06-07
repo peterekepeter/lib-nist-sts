@@ -46,7 +46,7 @@ namespace libNISTtest
 			Assert::AreEqual(result1.valid, result2.valid);
 			if (result1.valid && result2.valid)
 			{
-				for (size_t i = 0; i < 8; i++) {
+				for (size_t i = 0; i < result1.x.size(); i++) {
 					Assert::AreEqual(result1.J[i], result2.J[i], 0.01);
 					Assert::AreEqual(result1.x[i], result2.x[i], 0.01);
 					Assert::AreEqual(result1.p_value[i], result2.p_value[i], 0.01);

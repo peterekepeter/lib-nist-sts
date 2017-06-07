@@ -56,7 +56,7 @@ namespace libNISTtest
 			Assert::AreEqual(result1.chi2, result2.chi2, 0.01);
 			Assert::AreEqual(result1.chi2, result3.chi2, 0.01);
 			Assert::AreEqual(result1.chi2, result4.chi2, 0.01);*/
-			for (int i = 0; i < 6; i++) {
+			for (int i = 0; i < result1.nu.size(); i++) {
 				Assert::AreEqual(result1.nu[i], result2.nu[i], 0.01);
 				Assert::AreEqual(result1.nu[i], result3.nu[i], 0.01);
 				Assert::AreEqual(result1.nu[i], result4.nu[i], 0.01);
