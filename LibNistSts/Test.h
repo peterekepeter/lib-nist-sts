@@ -82,12 +82,37 @@ namespace Nist
 			return *parameters;
 		}
 
-		const Results::Frequency& RunFrequency();
+		const Results::Frequency& RunTestFrequency();
 
-		const Results::BlockFrequency& RunBlockFrequency();
+		const Results::BlockFrequency& RunTestBlockFrequency();
 
-		const Results& RunAll();
+		const Results::Cusum& RunTestCumulativeSums();
 
+		const Results::Runs& RunTestRuns();
+
+		const Results::LongestRunOfOnes& RunTestLongestRunOfOnes();
+
+		const Results::Rank& RunTestRank();
+
+		const Results::Dft& RunTestDiscreteFourierTransform();
+
+		const Results::NonOverlapping& RunTestNonOverlappingTemplateMatchings();
+
+		const Results::Overlapping& RunTestOverlappingTemplateMatchings();
+
+		const Results::Universal& RunTestUniversal();
+
+		const Results::ApproximateEntropy& RunTestApproximateEntropy();
+
+		const Results::RandomExcursion& RunTestRandomExcursions();
+
+		const Results::RandomExcursionVariant& RunTestRandomExcursionsVariant();
+
+		const Results::LinearComplexity& RunTestLinearComplexity();
+
+		const Results::Serial& RunTestSerial();
+
+		const Results& RunTestAll();
 
 	private:
 		BitSequence* bitStream;

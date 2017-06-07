@@ -34,7 +34,7 @@ namespace libNISTtest
 			data.resize(256);
 			for (auto& bit : data)
 			{
-				bit = lcg & 8 == 8;
+				bit = (lcg & 8) == 8;
 				lcg = lcg * 7612341 + 41235467;
 			}
 			return Nist::BitSequence(data);
@@ -48,7 +48,7 @@ namespace libNISTtest
 			paramsA.fast = 0;
 			Nist::Test test(&seq8, &paramsA);
 
-			auto results = test.RunFrequency();
+			auto results = test.RunTestFrequency();
 			Assert::IsTrue(results.sum == 0.0, L"Sum should be 0");
 		}
 
@@ -62,7 +62,7 @@ namespace libNISTtest
 			paramsA.fast = 1;
 			Nist::Test test(&seq8, &paramsA);
 
-			auto results = test.RunFrequency();
+			auto results = test.RunTestFrequency();
 			Assert::IsTrue(results.sum == 0.0, L"Sum should be 0");
 		}
 
@@ -75,7 +75,7 @@ namespace libNISTtest
 			paramsA.fast = 0;
 			Nist::Test test(&seq, &paramsA);
 
-			auto results = test.RunFrequency();
+			auto results = test.RunTestFrequency();
 			Assert::IsTrue(results.sum == 0.0, L"Sum should be 0");
 		}
 
@@ -87,7 +87,7 @@ namespace libNISTtest
 			paramsA.fast = 1;
 			Nist::Test test(&seq, &paramsA);
 
-			auto results = test.RunFrequency();
+			auto results = test.RunTestFrequency();
 			Assert::IsTrue(results.sum == 0.0, L"Sum should be 0");
 		}
 
